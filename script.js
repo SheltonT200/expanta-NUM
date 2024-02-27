@@ -145,3 +145,4 @@ o=o.mul(4)
 }
 }
 setInterval('updateCont()',25)
+//OmegaNum.fromObject(save.a2.value)
