@@ -57,7 +57,7 @@ a=zero
 t=one
 init=true
 f=false
-save=atob(localStorage.getItem("save"));
+save=JSON.parse(atob(localStorage.getItem("save")));
 }else{
 r=five.pow(s)
 o=four.pow(p)
