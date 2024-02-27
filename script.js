@@ -76,7 +76,7 @@ counter.innerText=a+"\n buy max "+f+"\n cpc = "+n+'('+b+"*"+c+"*"+m+'*'+o+"*"+r+
 }else{
 counter.innerText=a+"\n buy max "+f+"\n cpc = "+n+'('+b+"*"+c+"*"+m+'*'+o+"*"+r+")\n cost = "+e+" to buy "+h+" cpc \n rebirth cost "+i+"\n"+i.sub(a)+" more needed to rebirth\n"+" super rebirth costs "+k+" rebirths currently\n need "+k.sub(j)+" more\n ultra rebirth costs "+q+" super rebirths \n need "+q.sub(l)+" more"
 }
-save = btoa(JSON.stringify({
+savee = btoa(JSON.stringify({
 a1: {value:a},
 a2: {value:b},
 a3: {value:c},
@@ -99,7 +99,7 @@ c1: {value:s},
 c2: {value:t}
 }));
 }
-localStorage.setItem("save", save);
+localStorage.setItem("save", savee);
 }
 function Rebirth(){
 if (a.greaterThanOrEqualTo(i)){
