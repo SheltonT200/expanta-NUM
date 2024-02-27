@@ -57,7 +57,8 @@ a=zero
 t=one
 init=true
 f=false
-}
+save=atob(localStorage.getItem("save"));
+}else{
 r=five.pow(s)
 o=four.pow(p)
 m=three.pow(l)
@@ -75,11 +76,36 @@ counter.innerText=a+"\n buy max "+f+"\n cpc = "+n+'('+b+"*"+c+"*"+m+'*'+o+"*"+r+
 }else{
 counter.innerText=a+"\n buy max "+f+"\n cpc = "+n+'('+b+"*"+c+"*"+m+'*'+o+"*"+r+")\n cost = "+e+" to buy "+h+" cpc \n rebirth cost "+i+"\n"+i.sub(a)+" more needed to rebirth\n"+" super rebirth costs "+k+" rebirths currently\n need "+k.sub(j)+" more\n ultra rebirth costs "+q+" super rebirths \n need "+q.sub(l)+" more"
 }
+save = btoa(JSON.stringify({
+a1: {value:a},
+a2: {value:b},
+a3: {value:c},
+a4: {value:d},
+a5: {value:e},
+a6: {value:f},
+a7: {value:g},
+a8: {value:h},
+a9: {value:i},
+b1: {value:j},
+b2: {value:k},
+b3: {value:l},
+b4: {value:m},
+b5: {value:n},
+b6: {value:o},
+b7: {value:p},
+b8: {value:q},
+b9: {value:r},
+c1: {value:s},
+c2: {value:t}
+}));
+}
+localStorage.setItem("save", save);
 }
 function Rebirth(){
 if (a.greaterThanOrEqualTo(i)){
 a=a.sub(a)
 b=b.sub(b).add(1)
+t=OmegaNum(1)
 c=c.mul(2)
 j=j.add(1)
 }
