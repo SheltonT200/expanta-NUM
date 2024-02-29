@@ -71,6 +71,7 @@ e=OmegaNum.sumArithmeticSeries(h,10,5,b.sub(1))
 i=OmegaNum.sumGeometricSeries(1,50,5,j).floor()
 k=OmegaNum.sumGeometricSeries(1,5,1.5,l).floor()
 q=OmegaNum.sumGeometricSeries(1,4,2,p).floor()
+u=OmegaNum.sumGeometricSeries(1,6,1.85,s).floor()
 if (f==true){
 counter.innerText=a+"\n buy max "+f+"\n cpc = "+n+'('+b+"*"+c+"*"+m+'*'+o+"*"+r+")\n cost = "+d+" to buy "+g+" cpc\n rebirth cost "+i+"\n"+i.sub(a)+" more needed\n"+" super rebirth costs "+k+" rebirths currently\n need "+k.sub(j)+" more"
 }else{
@@ -140,9 +141,14 @@ c=c.sub(c).add(1)
 j=j.sub(j)
 l=l.sub(l)
 m=m.sub(m).add(1)
-p=p.add(1)
-o=o.mul(4)
+p=p.sub(p)
+o=o.sub(o).add(1)
+s=s.add(1)
+r=r.mul(5)
 }
 }
 setInterval('updateCont()',25)
-//OmegaNum.fromObject(save.a2.value)
+/*OmegaNum.fromObject(save.a2.value)
+c3: {value:u},
+c4: {value:v},
+c5: {value:w}*/
