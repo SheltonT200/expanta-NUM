@@ -81,6 +81,7 @@ r=OmegaNum.fromObject(save.b9.value)
 s=OmegaNum.fromObject(save.c1.value)
 t=OmegaNum.fromObject(save.c2.value)
 u=OmegaNum.fromObject(save.c3.value)
+init=true
 }
 }else{
 r=five.pow(s)
