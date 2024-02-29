@@ -48,6 +48,7 @@ if ( a.greaterThanOrEqualTo(e) ) {
 function updateCont(){
 var zero = OmegaNum(0),one = OmegaNum(1),two = OmegaNum(2),three = OmegaNum(3),four = OmegaNum(4),five = OmegaNum(5),six = OmegaNum(6),seven = OmegaNum(7)
 if (init===false){
+if (localStorage.getItem('save')==null){
 h=one
 s=zero
 p=zero
@@ -57,7 +58,30 @@ a=zero
 t=one
 init=true
 f=false
+}else{
 save=JSON.parse(atob(localStorage.getItem("save")));
+a=OmegaNum.fromObject(save.a1.value)
+b=OmegaNum.fromObject(save.a2.value)
+c=OmegaNum.fromObject(save.a3.value)
+d=OmegaNum.fromObject(save.a4.value)
+e=OmegaNum.fromObject(save.a5.value)
+f=OmegaNum.fromObject(save.a6.value)
+g=OmegaNum.fromObject(save.a7.value)
+h=OmegaNum.fromObject(save.a8.value)
+i=OmegaNum.fromObject(save.a9.value)
+j=OmegaNum.fromObject(save.b1.value)
+k=OmegaNum.fromObject(save.b2.value)
+l=OmegaNum.fromObject(save.b3.value)
+m=OmegaNum.fromObject(save.b4.value)
+n=OmegaNum.fromObject(save.b5.value)
+o=OmegaNum.fromObject(save.b6.value)
+p=OmegaNum.fromObject(save.b7.value)
+q=OmegaNum.fromObject(save.b8.value)
+r=OmegaNum.fromObject(save.b9.value)
+s=OmegaNum.fromObject(save.c1.value)
+t=OmegaNum.fromObject(save.c2.value)
+u=OmegaNum.fromObject(save.c3.value)
+}
 }else{
 r=five.pow(s)
 o=four.pow(p)
@@ -76,7 +100,7 @@ if (f==true){
 counter.innerText=a+"\n buy max "+f+"\n cpc = "+n+'('+b+"*"+c+"*"+m+'*'+o+"*"+r+")\n cost = "+d+" to buy "+g+" cpc\n rebirth cost "+i+"\n"+i.sub(a)+" more needed\n"+" super rebirth costs "+k+" rebirths currently\n need "+k.sub(j)+" more"
 }else{
 counter.innerText=a+"\n buy max "+f+"\n cpc = "+n+'('+b+"*"+c+"*"+m+'*'+o+"*"+r+")\n cost = "+e+" to buy "+h+" cpc \n rebirth cost "+i+"\n"+i.sub(a)+" more needed to rebirth\n"+" super rebirth costs "+k+" rebirths currently\n need "+k.sub(j)+" more\n ultra rebirth costs "+q+" super rebirths \n need "+q.sub(l)+" more"
-}
+}}
 savee = btoa(JSON.stringify({
 a1: {value:a},
 a2: {value:b},
@@ -97,9 +121,9 @@ b7: {value:p},
 b8: {value:q},
 b9: {value:r},
 c1: {value:s},
-c2: {value:t}
+c2: {value:t},
+c3: {value:u}
 }));
-}
 localStorage.setItem("save", savee);
 }
 function Rebirth(){
